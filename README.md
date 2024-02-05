@@ -18,7 +18,9 @@ Main functions and libraries are from MapBoxGL
 
 ## Credits
 [MapBoxGL](https://docs.mapbox.com/mapbox-gl-js/guides/)
+
 [DataScource:NYT](https://github.com/nytimes/covid-19-data/blob/43d32dde2f87bd4dafbb7d23f5d9e878124018b8/live/us-counties.csv)
+
 [DataScource:CensusBureau](https://www.census.gov/geographies/mapping-files/time-series/geo/carto-boundary-file.html)
 
 ## Acknowledgement
