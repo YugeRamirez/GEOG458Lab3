@@ -4,12 +4,16 @@ let map = new mapboxgl.Map({
     style: 'mapbox://styles/mapbox/dark-v10',
     zoom: 3,
     minZoom: 2,
-    center: [-96, 37.8]
+    center: [-96, 37.8],
 });
 const grades = [1000, 5000, 10000, 50000, 100000],
     colors = ['rgb(208,209,230)', 'rgb(103,169,207)', 'rgb(1,108,89)', 'rgb(255,255,0)', 'rgb(255,0,0)'],
     radii = [3, 5, 8, 10, 12];
 map.on('load', () => {
+    map.setProjection({
+        name: 'albers', 
+        parallels: [29.5, 45.5] 
+    });
     map.addSource('covid-cases', {
         type: 'geojson',
         data: 'assets/us-covid-2020-counts.json'

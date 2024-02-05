@@ -9,6 +9,10 @@ let map = new mapboxgl.Map({
 const grades = [4, 25, 50, 100, 200],
 colors = ['rgb(254,229,217)', 'rgb(252,174,145)', 'rgb(251,106,74)', 'rgb(222,45,38)', 'rgb(165,15,21)'];
 map.on('load', () => {
+    map.setProjection({
+        name: 'albers', 
+        parallels: [29.5, 45.5] 
+    });
     map.addSource('covid-rates', {
         type: 'geojson',
         data: 'assets/us-covid-2020-rates.json'
